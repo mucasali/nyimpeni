@@ -17,26 +17,25 @@ Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpo
 | --- | --- | ---|
 | Content-type | application/json | The Content-Type field indicates that JSON type is acceptable to send to the recipient |
 | Accept | application/json | The Accept field is used to specify that JSON type is acceptable for the response |
-| --- | --- | --- |
+
 
 #### **API Methods**
 | Endpoint | HTTP Method | Definition |
 | --- | --- | --- |
 | /register | POST | Endpoint for register to nyimpeni |
 | /login | POST | Endpoint for login to have token |
-| --- | --- | --- |
 
 #### **API JSON Body**
 
 ----------
  **Register** 
+ 
 | JSON Attribute | Type | Required | Description |
 | --- | --- | :---: | --- |
 | Username | String | Yes| Username of user |
 | Password | String | Yes | password of user |
 | ConfirmPassword | String | Yes | Confirmation password user |
 | mode | String | No | for create bucket/folder on server or no. Use parameter "no_nyimpeni" for register user without create bucket/folder.  
-| --- | --- | --- | --- |
 
 *example :*
 
@@ -61,11 +60,12 @@ Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpo
 
 
 **Login**
+
 | JSON Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | Username | String | Yes| Username of user |
 | Password | String | Yes | password of user |
-| --- | --- | --- | --- |
+
 *example :*
 ```
 {
