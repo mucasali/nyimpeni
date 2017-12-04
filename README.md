@@ -7,7 +7,7 @@ Nyimpeni API is a RESTful Web Service served as a communication bridge between s
 Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpoint. The HTTP(S) Header has to be used to allow proper authentication.
 
 #### **base url**
-> https://bok.cybermantra.net/api
+> https://localhost/api
 
 ## **1. Auth**
  this API for authenticating ( Login n Register)
