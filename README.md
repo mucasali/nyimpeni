@@ -76,37 +76,65 @@ Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpo
 
 ----------
 
-## 2. User
+## **2. User**
 
-* Register
-> this endpoint for register new member
+this API for manage user
+ 
+#### **HTTPS Header**
+| Header | Value | Definition |
+| --- | --- | ---|
+| Content-type | application/json | The Content-Type field indicates that JSON type is acceptable to send to the recipient |
+| Accept | application/json | The Accept field is used to specify that JSON type is acceptable for the response |
+| Authorization | Token | The Token get from result Login endpoint
 
- endpont
- ```
-POST {base_url}/api/register
+
+#### **API Methods**
+| Endpoint | HTTP Method | Definition |
+| --- | --- | --- |
+| /users/ ***_id*** | GET | Endpoint for get detail user  by ***_id*** |
+| /users/ ***_id*** | PUT | Endpoint for update profile user by ***_id*** |
+| /users/ ***_id*** | DELETE | Endpoint for delete user by ***_id*** |
+| /users/change-password | POST | Endpoint for update password user |
+
+***_id***  is spesific user id 
+
+
+#### **API JSON Body**
+
+ **Updata User** 
+ 
+| JSON Attribute | Type | Required | Description |
+| --- | --- | :---: | --- |
+| Username | String | Yes| Username of user |
+| Password | String | Yes | password of user |
+| ConfirmPassword | String | Yes | Confirmation password user | 
+
+*example :*
+
 ```
- header
- ```
- "Content-Type" : "application/json"
- ```
- body
- ```
- {
-		"username": "example",
-		"password": "password"
- }
-  ```
- response
- ```
- {
-	 "success" :  true,
-	 "message" :  "create user success",
-	 "data" : {
-			"username":"example",
-			"password":"password",
-			"_id":"2342342gs6342",
-			"updateAt": "2017-11-17T18:40:33.260Z",
-		    "createdAt": "2017-11-17T18:40:33.260Z"
-	  }
- }
- ```
+{
+	"username" : "example",
+	"password" : "exam_password",
+	"confirmPassword" : "exam_password"
+}
+```
+
+ **Change Password** 
+ 
+| JSON Attribute | Type | Required | Description |
+| --- | --- | :---: | --- |
+| oldPassword | String | Yes| old password to be changed |
+| newPassword | String | Yes | new password to be changed |
+| ConfirmPassword | String | Yes | confirm new password to be changed | 
+
+*example :*
+
+```
+{
+	"oldPassword" : "exam_password",
+	"newPassword" : "new_exam_password",
+	"confirmPassword" : "new_exam_password"
+}
+```
+
+----------
