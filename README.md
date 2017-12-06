@@ -35,6 +35,7 @@ Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpo
 | Username | String | Yes| Username of user |
 | Password | String | Yes | password of user |
 | ConfirmPassword | String | Yes | Confirmation password user |
+| email | String | Yes | Email of user |
 | mode | String | No | for create bucket/folder on server or no. Use parameter "no_nyimpeni" for register user without create bucket/folder. |
 
 *example :*
@@ -44,7 +45,8 @@ Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpo
 {
 	"username" : "example",
 	"password" : "exam_password",
-	"confirmPassword" : "exam_password"
+	"confirmPassword" : "exam_password",
+	"email" : "m@mail.com" 
 }
 ```
 - register user without create bucket / folder
@@ -53,6 +55,7 @@ Nyimpeni API can be requested through HTTP(S) Request to Nyimpeni Base URL endpo
 	"username" : "example",
 	"password" : "exam_password",
 	"confirmPassword" : "exam_password",
+	"email": "m@mail.com",
 	"mode" : "no_nyimpeni"
 }
 ```
